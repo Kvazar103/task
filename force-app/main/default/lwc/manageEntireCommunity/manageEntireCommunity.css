@@ -1,0 +1,25 @@
+/**
+ * Created by nvoinarovych on 12.03.2025.
+ */
+
+.main-text{
+    font-size: 25px;
+}
+.container{
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Вирівнює по центру горизонтально */
+    justify-content: center; /* Вирівнює по центру вертикально */
+    height: 30vh; /* Займає всю висоту екрану */
+    gap: 20px; /* Відстань між компонентами */
+    background: white;
+}
+.features{
+    display: flex;
+    justify-content: center; /* Центрує іконки в контейнері */
+    gap: 20px; /* Відстань між іконками */
+    align-items: center;
+}
+.center-text{
+    text-align: center;
+}

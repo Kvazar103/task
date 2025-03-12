@@ -1,3 +1,12 @@
 /**
  * Created by nvoinarovych on 12.03.2025.
  */
+
+.container {
+    display: flex;
+    flex-direction: column;
+    min-height: 1000vh;
+    background: white;
+}
+
+
