@@ -4,6 +4,6 @@
 
 import {LightningElement} from 'lwc';
 
-export default class NextCent extends LightningElement {
+export default class Header extends LightningElement {
 
 }

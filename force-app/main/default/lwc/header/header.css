@@ -1,4 +1,6 @@
-
+/**
+ * Created by nvoinarovych on 12.03.2025.
+ */
 .header {
     display: flex;
     align-items: center;
@@ -46,7 +48,4 @@
     background-color: green;
     border-radius: 9px;
     border:none;
-
 }
-
-
