@@ -1,7 +1,9 @@
 /**
- * Created by nvoinarovych on 12.03.2025.
+ * Created by nvoinarovych on 13.03.2025.
  */
-
+.container{
+    display: flex;
+}
 .main-text{
     font-size: 25px;
 }
@@ -12,9 +14,4 @@
     background-color: green;
     border-radius: 9px;
     border:none;
-}
-.container{
-    display:flex;
-    margin-top: 100px;
-
 }

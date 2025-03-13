@@ -1,0 +1,20 @@
+/**
+ * Created by nvoinarovych on 13.03.2025.
+ */
+.container{
+    display: flex;
+    gap:200px;
+    background-color: #F5F7FA;
+}
+.main-text{
+    font-size: 25px;
+}
+.icon{
+    display: flex;
+}
+.icons{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* 2 елементи в рядок */
+    gap: 20px; /* Відстань між елементами */
+    justify-content: center;
+}

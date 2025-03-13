@@ -1,0 +1,18 @@
+/**
+ * Created by nvoinarovych on 13.03.2025.
+ */
+.container{
+    display: flex;
+    gap:50px;
+}
+.text{
+    display: flex;
+    flex-direction: column;
+    gap: 28px;
+}
+.icons{
+    display: flex;
+    justify-content: center; /* Центрує іконки в контейнері */
+    gap: 20px; /* Відстань між іконками */
+    align-items: center;
+}
