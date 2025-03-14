@@ -8,13 +8,13 @@
 .icon-container {
     display: flex;
     justify-content: center; /* Центрує іконки в контейнері */
-    gap: 20px; /* Відстань між іконками */
+    gap: 140px; /* Відстань між іконками */
     align-items: center;
 }
 
 .icon {
-    width: 40px;
-    height: 40px;
+    width: 55px;
+    height: 55px;
 }
 .container{
     display: flex;

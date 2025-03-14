@@ -3,7 +3,7 @@
  */
 
 .main-text{
-    font-size: 25px;
+    font-size: 38px;
 }
 .learn-more-button{
     color: white;
@@ -17,4 +17,9 @@
     display:flex;
     margin-top: 100px;
 
+}
+.text{
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
 }

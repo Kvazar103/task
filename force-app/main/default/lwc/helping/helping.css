@@ -3,7 +3,8 @@
  */
 .container{
     display: flex;
-    gap:200px;
+    justify-content: space-between; /* Розміщує елементи на початку і в кінці */
+    align-items: center;
     background-color: #F5F7FA;
 }
 .main-text{
@@ -12,9 +13,13 @@
 .icon{
     display: flex;
 }
+.text{
+    padding-left: 100px;
+}
 .icons{
     display: grid;
     grid-template-columns: repeat(2, 1fr); /* 2 елементи в рядок */
     gap: 20px; /* Відстань між елементами */
     justify-content: center;
+    padding-right: 100px;
 }
