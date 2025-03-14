@@ -7,3 +7,21 @@
     padding-left: 22%;
     padding-right: 22%;
 }
+.cards{
+    gap:50px;
+    display:flex;
+    padding-left: 10%;
+    padding-right: 10%;
+    position: relative;
+}
+.badge{
+    position: absolute;
+    width: 270px;
+    height: 150px;
+    background: #F5F7FA;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    transform: translateY(-30px) translateX(33px);
+    border-radius: 10px;
+}

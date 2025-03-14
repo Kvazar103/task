@@ -1,0 +1,23 @@
+/**
+ * Created by nvoinarovych on 14.03.2025.
+ */
+.container{
+    background: #F5F7FA;
+    margin-top: 200px;
+    display: flex;         /* Встановлюємо Flexbox */
+    flex-direction: column; /* Вирівнюємо елементи по вертикалі (за замовчуванням по горизонталі) */
+    align-items: center;   /* Вирівнюємо по горизонталі (по центру) */
+    justify-content: center; /* Вирівнюємо по вертикалі (по центру) */
+    height: 50vh;          /* Задаємо висоту контейнера для кращого центрування */
+}
+.text{
+    font-size: 78px;
+}
+.button{
+    color: white;
+    width:151px;
+    height:52px;
+    background-color: green;
+    border-radius: 9px;
+    border:none;
+}

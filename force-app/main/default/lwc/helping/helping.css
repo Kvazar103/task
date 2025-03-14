@@ -1,11 +1,10 @@
-/**
- * Created by nvoinarovych on 13.03.2025.
- */
+
 .container{
     display: flex;
     justify-content: space-between; /* Розміщує елементи на початку і в кінці */
     align-items: center;
     background-color: #F5F7FA;
+    min-height: 240px;
 }
 .main-text{
     font-size: 25px;
