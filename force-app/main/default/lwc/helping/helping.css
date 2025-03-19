@@ -8,6 +8,11 @@
 .main-text{
     font-size: 25px;
 }
+.main-text-green{
+    font-size:25px;
+    color: green;
+}
+
 .icon{
     display: flex;
 }

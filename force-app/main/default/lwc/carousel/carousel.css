@@ -1,0 +1,38 @@
+/**
+ * Created by nvoinarovych on 19.03.2025.
+ */
+
+.container{
+    background: #F5F7FA;
+    display:flex;
+    padding:80px;
+    gap:30px;
+    min-height: 510px;
+    justify-content: space-between;
+}
+.first-element{
+    display: flex;
+    flex-direction: column;
+    min-width: 700px;
+    gap:35px
+}
+.register-button{
+    color: white;
+    width:151px;
+    height:52px;
+    background-color: green;
+    border-radius: 9px;
+    border:none;
+}
+.text{
+    font-size: 75px;
+}
+.text-green{
+    font-size: 75px;
+    color: green;
+}
+.main-text{
+    display: flex;
+    flex-direction: column;
+}
+

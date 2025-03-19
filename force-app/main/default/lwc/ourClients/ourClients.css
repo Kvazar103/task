@@ -4,7 +4,7 @@
 
 .icon-container {
     display: flex;
-    justify-content: center; /* Центрує іконки в контейнері */
+    justify-content: center; /* Centers icons in the container */
     gap: 140px; /* Відстань між іконками */
     align-items: center;
 }
@@ -16,9 +16,9 @@
 .container{
     display: flex;
     flex-direction: column;
-    align-items: center; /* Вирівнює по центру горизонтально */
-    justify-content: center; /* Вирівнює по центру вертикально */
-    height: 50vh; /* Займає всю висоту екрану */
-    gap: 20px; /* Відстань між компонентами */
+    align-items: center; /* Aligns horizontally to the center */
+    justify-content: center; /* Centers vertically */
+    height: 50vh; /* Takes up the entire height of the screen */
+    gap: 20px; /* Distance between components */
     background: white;
 }

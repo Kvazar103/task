@@ -1,11 +1,11 @@
 .container{
     background: #F5F7FA;
     margin-top: 200px;
-    display: flex;         /* Встановлюємо Flexbox */
-    flex-direction: column; /* Вирівнюємо елементи по вертикалі (за замовчуванням по горизонталі) */
-    align-items: center;   /* Вирівнюємо по горизонталі (по центру) */
-    justify-content: center; /* Вирівнюємо по вертикалі (по центру) */
-    height: 50vh;          /* Задаємо висоту контейнера для кращого центрування */
+    display: flex;         /* Setting up Flexbox */
+    flex-direction: column; /* Align elements vertically (by default horizontally) */
+    align-items: center;   /* Align horizontally (center) */
+    justify-content: center;/* Align vertically (center) */
+    height: 50vh;          /* Set the container height for better centering */
 }
 .text{
     font-size: 78px;

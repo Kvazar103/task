@@ -3,6 +3,9 @@
     padding-left: 22%;
     padding-right: 22%;
 }
+.main-text-title{
+    font-size: 38px;
+}
 .cards{
     gap:50px;
     display:flex;
@@ -21,3 +24,10 @@
     transform: translateY(-30px) translateX(33px);
     border-radius: 10px;
 }
+.badge-text{
+    font-size: 20px;
+}
+.badge-link{
+    color:green;font-size: 20px
+}
+

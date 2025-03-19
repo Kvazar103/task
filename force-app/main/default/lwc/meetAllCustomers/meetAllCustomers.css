@@ -23,4 +23,15 @@
     flex-direction: column;
     gap: 20px;
 }
+.text-icons-link{
+    color:green;
+    font-size: 20px;
+}
+.text-author{
+    color:green;
+    font-size: 15px;
+}
+.text-author-association{
+    font-size: 15px;
+}
 
