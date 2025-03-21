@@ -1,20 +1,7 @@
-/**
- * Created by nvoinarovych on 19.03.2025.
- */
 
 .container{
-    background: #F5F7FA;
-    display:flex;
-    padding:80px;
-    gap:30px;
     min-height: 510px;
-    justify-content: space-between;
-}
-.first-element{
-    display: flex;
-    flex-direction: column;
-    min-width: 700px;
-    gap:35px
+    min-width: 80%;
 }
 .register-button{
     color: white;
@@ -27,12 +14,13 @@
 .text{
     font-size: 75px;
 }
-.text-green{
-    font-size: 75px;
-    color: green;
+@media screen and (max-width: 840px){
+    .text{
+        font-size: 60px;
+    }
 }
-.main-text{
-    display: flex;
-    flex-direction: column;
+img{
+    min-width: 330px;
+    min-height: 350px;
 }
 

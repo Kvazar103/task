@@ -1,16 +1,10 @@
 .container{
-    display: flex;
     gap:50px;
     background: #F5F7FA;
     padding: 20px;
 }
-.text{
-    display: flex;
-    flex-direction: column;
-    gap: 28px;
-}
+
 .icons{
-    display: flex;
     gap: 50px;
     margin-top: 88px;
 }
@@ -19,8 +13,6 @@
     width: 55px;
 }
 .text-icons{
-    display: flex;
-    flex-direction: column;
     gap: 20px;
 }
 .text-icons-link{
@@ -34,4 +26,55 @@
 .text-author-association{
     font-size: 15px;
 }
+
+@media screen and (max-width: 1125px){
+    c-svg-files{
+        height: 49px;
+    }
+    .text-icons-link{
+        color:green;
+        font-size: 11px;
+    }
+    .text-icons{
+        gap: 0px;
+        width: 60%;
+    }
+    .icons{
+        margin-top: 60px;
+    }
+}
+@media screen and (max-width: 1093px){
+    .icons{
+        margin-top: 60px;
+    }
+    c-svg-files{
+        height: 30px;
+        width: 30px;
+    }
+}
+@media screen and (max-width: 993px){
+    .icons{
+        margin-top: 30px;
+        gap:20px;
+    }
+}
+@media screen and (max-width: 920px){
+    .icons{
+        margin-top: 15px;
+        gap:20px;
+    }
+    .container{
+        gap:40px;
+    }
+}
+@media screen and (max-width: 822px){
+    .icons{
+        margin-top: 0px;
+        gap:20px;
+    }
+    .container{
+        gap:30px;
+    }
+}
+
 

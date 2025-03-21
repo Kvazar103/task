@@ -1,19 +1,10 @@
 .header {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
     background-color: #f4f6f9;
     padding: 10px 20px;
     border-bottom: 2px solid #d8dde6;
 }
 
-.logo {
-    display: flex;
-    align-items: center;
-}
-
 .nav {
-    display: flex;
     gap: 20px;
 }
 

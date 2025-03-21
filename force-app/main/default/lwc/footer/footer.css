@@ -1,26 +1,15 @@
 .container{
     background: #263238;
-    height:340px;
-    display:flex;
-    justify-content: center;
-    align-items: center;
-    gap:520px;
+    min-height:340px;
 }
 .first{
-    display: flex;
-    flex-direction: column;
     gap:50px;
 }
 .second{
-    display: flex;
     gap:20px;
 }
 .second-title{
     font-size: 20px;
-}
-.logo {
-    display: flex;
-    align-items: center;
 }
 .nexcent-logo-name{
     color:white;
@@ -31,27 +20,20 @@
 }
 .company{
     color:white;
-    display: flex;
-    flex-direction: column;
     gap:20px;
     min-width: 160px;
 }
 .support{
     color:white;
-    display: flex;
-    flex-direction: column;
     gap:20px;
     min-width: 160px;
 }
 .email{
     color: white;
-    display: flex;
-    flex-direction: column;
     gap:20px;
 }
 
 .icons{
-    display: flex;
     gap: 10px;
 }
 

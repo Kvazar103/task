@@ -1,10 +1,8 @@
-.container{
-    display: flex;
-}
+
 .main-text{
     font-size: 38px;
 }
-.learn-more-button{
+button{
     color: white;
     width:151px;
     height:52px;
@@ -13,7 +11,15 @@
     border:none;
 }
 .text{
-    display: flex;
-    flex-direction: column;
     gap: 60px;
+}
+@media screen and (max-width: 1078px){
+    .text{
+        gap:0px;
+    }
+}
+@media screen and (max-width: 817px){
+    .main-text{
+        font-size: 30px;
+    }
 }

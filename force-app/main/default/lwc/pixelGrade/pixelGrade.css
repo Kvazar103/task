@@ -1,7 +1,7 @@
 .main-text{
     font-size: 38px;
 }
-.learn-more-button{
+button{
     color: white;
     width:151px;
     height:52px;
@@ -10,12 +10,29 @@
     border:none;
 }
 .container{
-    display:flex;
     margin-top: 100px;
-
 }
 .text{
-    display: flex;
-    flex-direction: column;
     gap: 50px;
+}
+
+@media screen and (max-width: 1260px){
+    .text{
+        gap:40px;
+    }
+}
+@media screen and (max-width: 1204px){
+    .text{
+        gap:20px;
+    }
+}
+@media screen and (max-width: 1129px){
+    .text{
+        gap:10px;
+    }
+}
+@media screen and (max-width: 994px){
+    .main-text{
+        font-size: 24px;
+    }
 }

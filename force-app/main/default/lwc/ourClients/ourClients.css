@@ -3,10 +3,7 @@
 }
 
 .icon-container {
-    display: flex;
-    justify-content: center; /* Centers icons in the container */
-    gap: 140px; /* Відстань між іконками */
-    align-items: center;
+    width:80vw;
 }
 
 .icon {
@@ -14,11 +11,7 @@
     height: 55px;
 }
 .container{
-    display: flex;
-    flex-direction: column;
-    align-items: center; /* Aligns horizontally to the center */
-    justify-content: center; /* Centers vertically */
-    height: 50vh; /* Takes up the entire height of the screen */
-    gap: 20px; /* Distance between components */
+    height: 50vh;
+    gap: 20px;
     background: white;
 }

@@ -1,33 +1,71 @@
-.main-text{
+.text{
     text-align: center;
-    padding-left: 22%;
-    padding-right: 22%;
-}
-.main-text-title{
-    font-size: 38px;
+    padding-left: 29%;
+    padding-right: 29%;
 }
 .cards{
-    gap:50px;
-    display:flex;
-    padding-left: 10%;
-    padding-right: 10%;
-    position: relative;
+    margin-bottom: 130px;
 }
+
 .badge{
     position: absolute;
-    width: 270px;
-    height: 150px;
+    /*width: 270px;*/
+    /*height: 150px;*/
+    height: 201px;
+    width: 255px;
     background: #F5F7FA;
-    display: flex;
-    flex-direction: column;
-    text-align: center;
+    padding:10px;
     transform: translateY(-30px) translateX(33px);
     border-radius: 10px;
 }
-.badge-text{
-    font-size: 20px;
+
+.green-text{
+    color:green;
 }
-.badge-link{
-    color:green;font-size: 20px
+
+@media screen and (max-width: 1100px){
+    .badge{
+        position: absolute;
+        /*width: 270px;*/
+        /*height: 150px;*/
+        height: 151px;
+        width: 205px;
+        background: #F5F7FA;
+        padding:10px;
+        transform: translateY(-30px) translateX(33px);
+        border-radius: 10px;
+    }
+    span{
+        font-size: 17px;
+    }
 }
+@media screen and (max-width: 909px){
+    .badge{
+        position: absolute;
+        height: 101px;
+        width: 175px;
+        background: #F5F7FA;
+        padding:10px;
+        transform: translateY(-30px) translateX(33px);
+        border-radius: 10px;
+    }
+    span{
+        font-size: 12px;
+    }
+}
+@media screen and (max-width: 820px){
+    .badge{
+        position: absolute;
+        height: 101px;
+        width: 155px;
+        background: #F5F7FA;
+        padding:10px;
+        transform: translateY(-30px) translateX(33px);
+        border-radius: 10px;
+    }
+    span{
+        font-size: 12px;
+    }
+}
+
 
