@@ -1,21 +1,21 @@
-.container{
+.container {
     background-color: #F5F7FA;
     min-height: 240px;
 }
-.main-text{
-    font-size: 25px;
-}
-.main-text-green{
-    /*font-size:25px;*/
+
+.main-text {
     color: green;
 }
-.text{
+
+.text {
     padding-left: 100px;
 }
-.icons{
+
+.icons {
     gap: 20px;
     width: 500px;
 }
-.icon{
+
+.icon {
     width: 197px;
 }

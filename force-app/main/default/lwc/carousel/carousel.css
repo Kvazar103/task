@@ -1,25 +1,28 @@
-
-.container{
+.container {
     min-height: 510px;
     min-width: 80%;
 }
-.register-button{
+
+.register-button {
     color: white;
-    width:151px;
-    height:52px;
+    width: 151px;
+    height: 52px;
     background-color: green;
     border-radius: 9px;
-    border:none;
+    border: none;
 }
-.text{
+
+.text {
     font-size: 75px;
 }
-@media screen and (max-width: 840px){
-    .text{
+
+@media screen and (max-width: 840px) {
+    .text {
         font-size: 60px;
     }
 }
-img{
+
+img {
     min-width: 330px;
     min-height: 350px;
 }
