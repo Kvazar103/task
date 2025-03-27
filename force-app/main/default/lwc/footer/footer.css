@@ -1,0 +1,69 @@
+.container {
+    background: #263238;
+    min-height:340px;
+}
+
+.first {
+    gap: 50px;
+}
+
+.second {
+    gap: 20px;
+}
+
+.second-title {
+    font-size: 20px;
+}
+
+.nexcent-logo-name {
+    color: white;
+    font-size: 40px;
+}
+
+.first-text {
+    color: white;
+}
+
+.company {
+    color: white;
+    gap: 20px;
+    min-width: 160px;
+}
+
+.support {
+    color: white;
+    gap: 20px;
+    min-width: 160px;
+}
+
+.email {
+    color: white;
+    gap: 20px;
+}
+
+.icons {
+    gap: 10px;
+}
+
+input {
+    width: 100%;
+    padding: 10px 40px 10px 10px;
+    font-size: 16px;
+    background: gray;
+    color: white;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+input::placeholder {
+    color: white;
+}
+
+button{
+    background: none;
+    border: none;
+    position: absolute;
+    transform: translateY(10px) translateX(-40px);
+}
+

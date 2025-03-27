@@ -1,0 +1,17 @@
+.our-clients {
+    font-size: 25px;
+}
+
+.icon-container {
+    width: 80vw;
+}
+
+.icon {
+    width: 55px;
+    height: 55px;
+}
+.container {
+    height: 50vh;
+    gap: 20px;
+    background: white;
+}

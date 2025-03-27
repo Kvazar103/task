@@ -1,0 +1,20 @@
+.container{
+    background: #F5F7FA;
+    height: 50vh;
+}
+.text{
+    font-size: 78px;
+}
+button{
+    color: white;
+    width:151px;
+    height:52px;
+    background-color: green;
+    border-radius: 9px;
+    border:none;
+}
+@media screen and (max-width: 1250px){
+    .text{
+        font-size: 50px;
+    }
+}

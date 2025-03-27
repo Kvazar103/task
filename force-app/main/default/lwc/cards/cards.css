@@ -1,0 +1,70 @@
+.text {
+    padding-left: 29%;
+    padding-right: 29%;
+}
+
+.cards {
+    margin-bottom: 130px;
+}
+
+.badge {
+    position: absolute;
+    height: 200px;
+    width: 252px;
+    background: #F5F7FA;
+    padding: 10px;
+    transform: translateY(-30px) translateX(33px);
+    border-radius: 10px;
+}
+
+.card-link {
+    color: green;
+}
+
+@media screen and (max-width: 1100px) {
+    .badge {
+        position: absolute;
+        height: 151px;
+        width: 205px;
+        background: #F5F7FA;
+        padding: 10px;
+        transform: translateY(-30px) translateX(33px);
+        border-radius: 10px;
+    }
+
+    span {
+        font-size: 17px;
+    }
+}
+
+@media screen and (max-width: 909px) {
+    .badge {
+        position: absolute;
+        height: 101px;
+        width: 175px;
+        background: #F5F7FA;
+        padding: 10px;
+        transform: translateY(-30px) translateX(33px);
+        border-radius: 10px;
+    }
+
+    span {
+        font-size: 12px;
+    }
+}
+
+@media screen and (max-width: 820px){
+    .badge {
+        position: absolute;
+        height: 101px;
+        width: 155px;
+        background: #F5F7FA;
+        padding: 10px;
+        transform: translateY(-30px) translateX(33px);
+        border-radius: 10px;
+    }
+
+    span {
+        font-size: 12px;
+    }
+}

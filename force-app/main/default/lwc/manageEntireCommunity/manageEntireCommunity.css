@@ -1,0 +1,40 @@
+.main-text {
+    font-size: 25px;
+    width: 260px;
+}
+
+.container {
+    gap: 80px;
+    background: white;
+}
+
+.features {
+    gap: 120px;
+}
+
+.feature {
+    height: 200px;
+    width: 260px;
+}
+
+.title-text {
+    font-size: 35px;
+}
+
+@media screen and (max-width: 1044px) {
+    .features {
+        gap: 30px;
+    }
+}
+
+@media screen and (max-width: 877px) {
+    .features {
+        gap: 5px;
+    }
+}
+
+@media screen and (max-width: 819px) {
+    .features {
+        gap: 0px;
+    }
+}

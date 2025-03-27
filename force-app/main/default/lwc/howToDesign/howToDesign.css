@@ -1,0 +1,25 @@
+
+.main-text{
+    font-size: 38px;
+}
+button{
+    color: white;
+    width:151px;
+    height:52px;
+    background-color: green;
+    border-radius: 9px;
+    border:none;
+}
+.text{
+    gap: 60px;
+}
+@media screen and (max-width: 1078px){
+    .text{
+        gap:0px;
+    }
+}
+@media screen and (max-width: 817px){
+    .main-text{
+        font-size: 30px;
+    }
+}
