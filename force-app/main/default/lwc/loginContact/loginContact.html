@@ -1,0 +1,33 @@
+<!-- Login Contact -->
+<template>
+    <section role="dialog" tabindex="-1" aria-modal="true" class="slds-modal slds-fade-in-open">
+        <div class="slds-modal__container">
+            <header class="slds-modal__header">
+                <button class="slds-button slds-button_icon slds-modal__close slds-button_icon-inverse" onclick={closeModal} title="Close">
+                    <lightning-icon icon-name="utility:close" alternative-text="Close" size="small"></lightning-icon>
+                </button>
+                <h2 class="slds-text-heading_medium">Login</h2>
+            </header>
+            <div class="slds-modal__content slds-p-around_medium">
+                <lightning-input
+                        label="Login"
+                        value={login}
+                        data-field="login"
+                        onchange={handleChange}
+                ></lightning-input>
+                <lightning-input
+                        label="Password"
+                        type="password"
+                        value={password}
+                        data-field="password"
+                        onchange={handleChange}
+                ></lightning-input>
+            </div>
+            <footer class="slds-modal__footer">
+                <lightning-button class="slds-m-right_small" label="Cancel" onclick={closeModal}></lightning-button>
+                <lightning-button variant="brand" type="submit" label="Login" onclick={handleLogin}></lightning-button>
+            </footer>
+        </div>
+    </section>
+    <div class="slds-backdrop slds-backdrop_open"></div>
+</template>
