@@ -1,6 +1,6 @@
 import {LightningElement,api} from 'lwc';
 
-export default class SvgFiles extends LightningElement {
+export default class SvgLibrary extends LightningElement {
     @api name;
 
     get isNexcentIcon(){
