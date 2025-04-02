@@ -1,6 +1,6 @@
 import {LightningElement} from 'lwc';
-import checkContactLoginAndPassword from '@salesforce/apex/ContactController.checkContactLoginAndPassword';
 import {ShowToastEvent} from 'lightning/platformShowToastEvent';
+import checkContactLoginAndPassword from '@salesforce/apex/ContactController.checkContactLoginAndPassword';
 
 export default class LoginContact extends LightningElement {
 
