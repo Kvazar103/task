@@ -2,7 +2,7 @@ public with sharing class ContactService {
 
     public static void createContact(Contact contact) {
 
-        if(contact != null){
+        if (contact != null) {
             insert contact;
         }
     }
@@ -12,7 +12,7 @@ public with sharing class ContactService {
         try {
             Contact contact = ContactSelector.getContactByLogin(login);
 
-            if(contact == null){
+            if (contact == null) {
                 return false;
             }
 
