@@ -1,0 +1,13 @@
+<template>
+        <template lwc:if={contacts}>
+            <lightning-datatable
+                    columns={columns}
+                    data={contacts}
+                    key-field="Id"
+            ></lightning-datatable>
+        </template>
+
+        <template lwc:elseif= {contacts.error}>
+            <p>{contacts.error}</p>
+        </template>
+</template>
