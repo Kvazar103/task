@@ -1,51 +1,66 @@
-import { LightningElement } from 'lwc';
-import { createRecord } from 'lightning/uiRecordApi';
-import CONTACT_OBJECT from '@salesforce/schema/Contact';
-import CONTACT_FIRSTNAME from '@salesforce/schema/Contact.FirstName';
-import CONTACT_LASTNAME from '@salesforce/schema/Contact.LastName';
-import CONTACT_LOGIN from '@salesforce/schema/Contact.Login__c';
-import CONTACT_PASSWORD from '@salesforce/schema/Contact.Password__c';
+import { LightningElement, wire  } from 'lwc';
+import { ShowToastEvent } from 'lightning/platformShowToastEvent';
+import { publish, MessageContext } from 'lightning/messageService';
+
+import CONTACT_CHANNEL from '@salesforce/messageChannel/contactMessageChannel__c';
+import createContact from '@salesforce/apex/ContactController.createContact'
 
 export default class CreateContactModal extends LightningElement {
 
-    firstName = '';
-    lastName = '';
-    login = '';
-    password = '';
+    @wire(MessageContext)
+    messageContext;
 
-    handleChange(event) {
+    isLoading = false;
+
+    contact = {
+        FirstName: null,
+        LastName: null,
+        Login__c: null,
+        Password__c: null
+    }
+
+    onChange(event) {
         const fieldName = event.target.dataset.field;
-        this[fieldName] = event.target.value;
+        this.contact[fieldName] = event.target.value;
     }
 
     handleSave() {
-        const fields={};
+        this.isLoading = true;
+        const hasNullOrEmptyField = Object.values(this.contact).some(field => !field || field.trim() === '');
 
-        fields[CONTACT_FIRSTNAME.fieldApiName]=this.firstName;
-        fields[CONTACT_LASTNAME.fieldApiName]=this.lastName;
-        fields[CONTACT_LOGIN.fieldApiName]=this.login;
-        fields[CONTACT_PASSWORD.fieldApiName]=this.password;
+        if (hasNullOrEmptyField) {
+            this.showToast('Error!','Contact fields cannot be empty.','error');
+            this.isLoading = false;
+            return;
+        }
 
-        const recordInput={apiName:CONTACT_OBJECT.objectApiName,fields};
+        createContact({contact:this.contact})
+            .then(() => {
+                const newContact = {
+                    FirstName: this.contact.FirstName,
+                    LastName: this.contact.LastName,
+                    Login__c: this.contact.Login__c,
+                    Password__c: this.contact.Password__c,
+                }
 
-        createRecord(recordInput)
-            .then(()=>{
-                this.dispatchEvent(new CustomEvent('contactcreated',{
-                    detail:{
-                        FirstName:this.firstName,
-                        LastName:this.lastName,
-                        Login__c:this.login,
-                        Password__c:this.password,
-                    },
-                    bubbles: true,
-                    composed: true
-                }));
+                publish(this.messageContext, CONTACT_CHANNEL, { contact: newContact });
+
+                this.showToast('Success!','Contact successfully created!','success');
                 this.closeModal();
+                this.isLoading = false;
             })
-            .catch((error)=>{
-                console.log("Error creating contact: ",error);
+            .catch((error)=> {
+                this.showToast('Error creating contact.','Error with status code:'+error.status +" " +error.statusText,'error');
+                this.isLoading = false;
             })
+    }
 
+    showToast(title, message, variant) {
+        this.dispatchEvent(new ShowToastEvent({
+            title: title,
+            message: message,
+            variant: variant
+        }));
     }
 
     closeModal() {

@@ -1,93 +1,94 @@
-import {LightningElement,api} from 'lwc';
+import { LightningElement, api } from 'lwc';
 
 export default class SvgLibrary extends LightningElement {
+
     @api name;
 
-    get isNexcentIcon(){
+    get isNexcentIcon() {
         return this.name === 'nexcentIcon';
     }
 
-    get isInstagramIcon(){
+    get isInstagramIcon() {
         return this.name === 'instagramIcon';
     }
 
-    get isDribbbleIcon(){
+    get isDribbbleIcon() {
         return this.name === 'dribbbleIcon';
     }
 
-    get isTwitterIcon(){
+    get isTwitterIcon() {
         return this.name === 'twitterIcon';
     }
 
-    get isYoutubeIcon(){
+    get isYoutubeIcon() {
         return this.name === 'youtubeIcon';
     }
 
-    get isEmailSentIcon(){
+    get isEmailSentIcon() {
         return this.name === 'emailSentIcon';
     }
 
-    get isMembersIcon(){
+    get isMembersIcon() {
         return this.name === 'membersIcon';
     }
 
-    get isEventBookingIcon(){
+    get isEventBookingIcon() {
         return this.name === 'eventBookingIcon';
     }
 
-    get isClubIcon(){
+    get isClubIcon() {
         return this.name === 'clubIcon';
     }
 
-    get isPaymentIcon(){
+    get isPaymentIcon() {
         return this.name === 'paymentIcon';
     }
 
-    get isPhoneImage(){
+    get isPhoneImage() {
         return this.name === 'phoneImage'
     }
 
-    get isMembershipOrganisationIcon(){
+    get isMembershipOrganisationIcon() {
         return this.name === 'membershipOrganisationsIcon';
     }
 
-    get isNationalAssociationsIcon(){
+    get isNationalAssociationsIcon() {
         return this.name === 'nationalAssociationsIcon';
     }
 
-    get isClubsAndGroupsIcon(){
+    get isClubsAndGroupsIcon() {
         return this.name === 'clubsAndGroupsIcon';
     }
 
-    get isMeetAllCustomersFirstLogo(){
+    get isMeetAllCustomersFirstLogo() {
         return this.name === 'firstLogo';
     }
 
-    get isMeetAllCustomersFirstLogoBlack(){
+    get isMeetAllCustomersFirstLogoBlack() {
         return this.name === 'firstLogoBlack';
     }
 
-    get isMeetAllCustomersSecondLogo(){
+    get isMeetAllCustomersSecondLogo() {
         return this.name === 'secondLogo';
     }
 
-    get isMeetAllCustomersThirdLogo(){
+    get isMeetAllCustomersThirdLogo() {
         return this.name === 'thirdLogo';
     }
 
-    get isMeetAllCustomersFourthLogo(){
+    get isMeetAllCustomersFourthLogo() {
         return this.name === 'fourthLogo';
     }
 
-    get isMeetAllCustomersFifthLogo(){
+    get isMeetAllCustomersFifthLogo() {
         return this.name === 'fifthLogo';
     }
 
-    get isMeetAllCustomersSixthLogo(){
+    get isMeetAllCustomersSixthLogo() {
         return this.name === 'sixthLogo';
     }
 
-    get isPixelGradeImage(){
+    get isPixelGradeImage() {
         return this.name === 'pixelGradeImage';
     }
 }

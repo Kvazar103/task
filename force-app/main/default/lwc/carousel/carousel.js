@@ -1,6 +1,17 @@
-import {LightningElement} from 'lwc';
+import { LightningElement } from 'lwc';
+
 import webIllustration from '@salesforce/resourceUrl/webIllustration';
 
 export default class Carousel extends LightningElement {
-    image=webIllustration;
+
+    image = webIllustration;
+    isContactCreationModalOpen = false;
+
+    handleOpenContactCreationModal() {
+        this.isContactCreationModalOpen = true;
+    }
+
+    handleCloseContactCreationModal() {
+        this.isContactCreationModalOpen = false;
+    }
 }

@@ -42,5 +42,9 @@
     <types>
         <name>ListView</name>
     </types>
+    <types>
+        <members>ContactCreate__c</members>
+        <name>LightningMessageChannel</name>
+    </types>
     <version>63.0</version>
 </Package>

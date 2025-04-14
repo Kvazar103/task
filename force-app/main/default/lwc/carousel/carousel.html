@@ -7,10 +7,18 @@
                 <span class="slds-text-heading_large slds-text-color_success text">from 8 years</span>
             </div>
             <span>Where to grow your business as a photographer: site or social media?</span>
-            <button class="register-button">Register</button>
+            <button
+                    class="register-button"
+                    onclick={handleOpenContactCreationModal}>
+                Register
+            </button>
         </div>
         <div>
             <img src={image} alt="image"/>
         </div>
     </div>
+
+    <template lwc:if= {isContactCreationModalOpen}>
+        <c-create-contact-modal onclose={handleCloseContactCreationModal}></c-create-contact-modal>
+    </template>
 </template>

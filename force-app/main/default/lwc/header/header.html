@@ -6,28 +6,45 @@
         </div>
 
         <nav class="slds-grid nav">
-            <a href="#" target="_blank" class="nav-link">Home</a>
-            <a href="#" target="_blank" class="nav-link">Service</a>
-            <a href="#" target="_blank" class="nav-link">Feature</a>
-            <a href="#" target="_blank" class="nav-link">Product</a>
-            <a href="#" target="_blank" class="nav-link">Testimonial</a>
-            <a href="#" target="_blank" class="nav-link">FAQ</a>
+            <a class="nav-link">
+                Home
+            </a>
+            <a class="nav-link">
+                Service
+            </a>
+            <a class="nav-link">
+                Feature
+            </a>
+            <a class="nav-link">
+                Product
+            </a>
+            <a class="nav-link">
+                Testimonial
+            </a>
+            <a class="nav-link">
+                FAQ
+            </a>
         </nav>
 
         <div class="slds-grid actions">
-            <button class="login-button" onclick={handleOpenLoginContactModal}>Login</button>
-            <button class="sign-up-button" onclick={handleOpenContactCreationModal}>Sign up</button>
+            <button
+                    class="login-button"
+                    onclick={handleOpenLoginContactModal}>
+                Login
+            </button>
+            <button
+                    class="sign-up-button"
+                    onclick={handleOpenContactCreationModal}>
+                Sign up
+            </button>
         </div>
     </div>
 
-    <template lwc:if= {isContactCreationModalOpen}>
-        <c-create-contact-modal
-                onclose={handleCloseContactCreationModal}
-                oncontactcreated={handleContactCreation}
-        ></c-create-contact-modal>
+    <template lwc:if={isContactCreationModalOpen}>
+        <c-create-contact-modal onclose={handleCloseContactCreationModal}></c-create-contact-modal>
     </template>
 
-    <template lwc:elseif= {isLoginContactModalOpen}>
+    <template lwc:elseif={isLoginContactModalOpen}>
         <c-login-contact onclose={handleCloseLoginContactModal}></c-login-contact>
     </template>
 

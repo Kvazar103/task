@@ -1,11 +1,12 @@
 import {LightningElement} from 'lwc';
 import {ShowToastEvent} from 'lightning/platformShowToastEvent';
-import checkContactLoginAndPassword from '@salesforce/apex/ContactController.checkContactLoginAndPassword';
+
+import hasContactLoginAndPassword from '@salesforce/apex/ContactController.hasContactLoginAndPassword';
 
 export default class LoginContact extends LightningElement {
 
-    login=''
-    password=''
+    login = null
+    password = null
 
     handleChange(event) {
         const fieldName = event.target.dataset.field;
@@ -13,7 +14,7 @@ export default class LoginContact extends LightningElement {
     }
 
     handleLogin(){
-        checkContactLoginAndPassword({ login: this.login, password: this.password })
+        hasContactLoginAndPassword({ login: this.login, password: this.password })
             .then(result => {
                 if (result) {
                     this.showToast('Login success!','You have logged in!','success');
@@ -23,8 +24,7 @@ export default class LoginContact extends LightningElement {
                 }
             })
             .catch(error => {
-                console.log('Error: ',error);
-                this.showToast('Error','Something went wrong. Contact your system administrator for more info.','error');
+                this.showToast('Error','Error with status code:'+error.status +" " +error.statusText,'error');
             })
     }
 
