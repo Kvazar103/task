@@ -12,7 +12,7 @@ public with sharing class ContactController {
 
     @AuraEnabled
     public static Boolean hasContactLoginAndPassword(String login, String password) {
-        return ContactService.hasContactLoginAndPassword(login,password);
+        return ContactService.hasContactLoginAndPassword(login, password);
     }
 
 }

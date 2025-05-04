@@ -21,10 +21,27 @@ export default class CreateContactModal extends LightningElement {
 
     onChange(event) {
         const fieldName = event.target.dataset.field;
-        this.contact[fieldName] = event.target.value;
+        const value = event.target.value;
+
+        switch (fieldName) {
+            case 'FirstName':
+                this.contact["FirstName"] = value;
+                break;
+            case 'LastName':
+                this.contact["LastName"] = value;
+                break;
+            case 'Login__c':
+                this.contact["Login__c"] = value;
+                break;
+            case 'Password__c':
+                this.contact["Password__c"] = value;
+                break;
+            default:
+                this.showToast('Error', 'Unknown field name:' + fieldName, 'error');
+        }
     }
 
-    handleSave() {
+    async handleSave() {
         this.isLoading = true;
         const hasNullOrEmptyField = Object.values(this.contact).some(field => !field || field.trim() === '');
 
@@ -34,32 +51,37 @@ export default class CreateContactModal extends LightningElement {
             return;
         }
 
-        createContact({contact:this.contact})
-            .then(() => {
-                const newContact = {
-                    FirstName: this.contact.FirstName,
-                    LastName: this.contact.LastName,
-                    Login__c: this.contact.Login__c,
-                    Password__c: this.contact.Password__c,
-                }
+        try {
 
-                publish(this.messageContext, CONTACT_CHANNEL, { contact: newContact });
+            await createContact({contact: this.contact});
 
-                this.showToast('Success!','Contact successfully created!','success');
-                this.closeModal();
-                this.isLoading = false;
-            })
-            .catch((error)=> {
-                this.showToast('Error creating contact.','Error with status code:'+error.status +" " +error.statusText,'error');
-                this.isLoading = false;
-            })
+            const newContact = {
+                FirstName: this.contact.FirstName,
+                LastName: this.contact.LastName,
+                Login__c: this.contact.Login__c,
+                Password__c: this.contact.Password__c,
+            }
+
+            publish(this.messageContext, CONTACT_CHANNEL, { contact: newContact });
+
+            this.showToast('Success!','Contact successfully created!','success');
+            this.closeModal();
+            this.isLoading = false;
+
+        } catch (error) {
+            this.showToast('Error creating contact.','Error with status code:'+error.status +" " +error.statusText,'error');
+            this.isLoading = false;
+
+        } finally {
+            this.isLoading = false;
+        }
     }
 
     showToast(title, message, variant) {
         this.dispatchEvent(new ShowToastEvent({
-            title: title,
-            message: message,
-            variant: variant
+            title,
+            message,
+            variant
         }));
     }
 

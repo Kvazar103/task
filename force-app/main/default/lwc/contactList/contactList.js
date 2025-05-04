@@ -40,9 +40,9 @@ export default class ContactList extends LightningElement {
 
     showToast(title, message, variant){
         this.dispatchEvent(new ShowToastEvent({
-            title:title,
-            message:message,
-            variant:variant
+            title,
+            message,
+            variant
         }));
     }
 }

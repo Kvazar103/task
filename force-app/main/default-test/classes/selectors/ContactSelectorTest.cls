@@ -19,10 +19,10 @@ private class ContactSelectorTest {
         List<Contact> contacts = ContactSelector.getAllContactWithLogin();
         Test.stopTest();
 
-        Assert.isTrue(contacts.size() == 3);
+        Assert.areEqual(3, contacts.size());
 
         for (Contact contact: contacts) {
-            Assert.isTrue(contact.Login__c != null);
+            Assert.isNotNull(contact.Login__c);
         }
 
     }
@@ -36,7 +36,7 @@ private class ContactSelectorTest {
         Contact contactByLogin = ContactSelector.getContactByLogin(contact.Login__c);
         Test.stopTest();
 
-        Assert.isTrue(contactByLogin != null);
-        Assert.isTrue(contactByLogin.Login__c == contact.Login__c);
+        Assert.isNotNull(contactByLogin);
+        Assert.areEqual(contactByLogin.Login__c, contact.Login__c);
     }
 }

@@ -28,24 +28,24 @@
                 </div>
                 <div lwc:else>
                     <lightning-input
-                            label="First Name"
                             data-field="FirstName"
+                            label="First Name"
                             onchange={onChange}
                     ></lightning-input>
                     <lightning-input
-                            label="Last Name"
                             data-field="LastName"
+                            label="Last Name"
                             onchange={onChange}
                     ></lightning-input>
                     <lightning-input
-                            label="Login"
                             data-field="Login__c"
+                            label="Login"
                             onchange={onChange}
                     ></lightning-input>
                     <lightning-input
+                            data-field="Password__c"
                             label="Password"
                             type="password"
-                            data-field="Password__c"
                             onchange={onChange}
                     ></lightning-input>
                 </div>
@@ -57,9 +57,9 @@
                         onclick={closeModal}
                 ></lightning-button>
                 <lightning-button
-                        variant="brand"
-                        type="submit"
                         label="Save"
+                        type="submit"
+                        variant="brand"
                         onclick={handleSave}
                 ></lightning-button>
             </footer>

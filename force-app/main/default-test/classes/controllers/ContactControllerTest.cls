@@ -12,8 +12,8 @@ private class ContactControllerTest {
 
         Contact result = [SELECT Id,LastName FROM Contact LIMIT 1];
 
-        Assert.isTrue(result!=null);
-        Assert.areEqual(result.LastName,'Test');
+        Assert.isNotNull(result);
+        Assert.areEqual('Test', result.LastName);
 
     }
 
@@ -28,7 +28,7 @@ private class ContactControllerTest {
         List<Contact> contacts = ContactController.getContacts();
         Test.stopTest();
 
-        Assert.isTrue(contacts.size()==3);
+        Assert.areEqual(3, contacts.size());
     }
 
     @IsTest
