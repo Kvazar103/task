@@ -22,18 +22,20 @@
     display: flex;
     gap: 10px;
 }
-.login-button{
-    color:green;
-    width:79px;
+
+.login-button {
+    color: green;
+    width: 79px;
     height: 32px;
     border: none;
-    background-color: #f4f6f9;;
+    background-color: #f4f6f9;
 }
-.sign-up-button{
+
+.sign-up-button {
     color: white;
-    width:79px;
-    height:32px;
+    width: 79px;
+    height: 32px;
     background-color: green;
     border-radius: 9px;
-    border:none;
+    border: none;
 }
